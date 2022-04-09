@@ -1,11 +1,14 @@
-import discord
+from src.Pomodoro.Pomodoro import DiscordCog
 import os 
+from discord.ext import commands
 from dotenv import load_dotenv
 
 from src.Todo.Todo import get_tasks, getEmbededTasks, perform_crd_tasks
 load_dotenv()
 
-client = discord.Client()
+client = commands.Bot(command_prefix='!', help_command=None)
+client.add_cog(DiscordCog(client))
+client.run(os.getenv('TOKEN'))
 
 @client.event
 async def on_ready():
