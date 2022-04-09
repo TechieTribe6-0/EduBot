@@ -6,6 +6,8 @@ __pycache__/
 # C extensions
 *.so
 
+
+src/SecretKey.json
 # Distribution / packaging
 .Python
 build/
@@ -102,8 +104,9 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+
 .venv
+.env
 env/
 venv/
 ENV/
